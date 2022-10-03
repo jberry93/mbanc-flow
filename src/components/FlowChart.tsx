@@ -2,18 +2,12 @@ import { useCallback } from "react";
 import ReactFlow, { addEdge, Background, Connection, Controls, Edge, MiniMap, Node, useEdgesState, useNodesState } from "reactflow";
 import "reactflow/dist/style.css";
 
-const initialNodes: Node<any>[] = [
-    { id: '1', position: { x: 0, y: 0 }, data: { label: '1' } },
-    { id: '2', position: { x: 0, y: 100 }, data: { label: '2' } },
-];
-
-const initialEdges: Edge<any>[] = [
-    { id: 'e1-2', source: '1', target: '2' },
-];
+import initialNodes from '../data/nodes.json';
+import initialEdges from '../data/edges.json';
 
 export function FlowChart() {
-    const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-    const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
+    const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes as Node<any>[]);
+    const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges as Edge<any>[]);
 
     const onConnect = useCallback(
         (params: Edge<any> | Connection) => setEdges((eds) => addEdge(params, eds)),
@@ -27,6 +21,7 @@ export function FlowChart() {
             onNodesChange={onNodesChange}
             onEdgesChange={onEdgesChange}
             onConnect={onConnect}
+            fitView
         >
             <MiniMap/>
             <Controls/>

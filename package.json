@@ -15,6 +15,7 @@
     "author": "Jeffrey Berry <jeffreyberry93@gmail.com>",
     "license": "MIT",
     "dependencies": {
+        "@fontsource/inter": "^4.5.13",
         "astro": "^1.4.3",
         "reactflow": "^11.1.0"
     },

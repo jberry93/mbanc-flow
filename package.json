@@ -1,0 +1,31 @@
+{
+    "name": "mbanc-flow",
+    "version": "1.0.0",
+    "description": "Stepper flow for mbanc",
+    "main": "index.js",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build-ts": "astro check && tsc --noEmit && astro build",
+        "check": "astro check",
+        "build": "astro build",
+        "preview": "astro-preview"
+    },
+    "keywords": [],
+    "author": "Jeffrey Berry <jeffreyberry93@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "astro": "^1.4.3",
+        "reactflow": "^11.1.0"
+    },
+    "devDependencies": {
+        "@astrojs/react": "^1.1.4",
+        "@astrojs/tailwind": "^2.0.2",
+        "@types/node": "^18.8.0",
+        "@types/react": "^18.0.21",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "tailwindcss": "^3.1.8",
+        "typescript": "^4.8.4"
+    }
+}

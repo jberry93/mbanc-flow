@@ -1,4 +1,8 @@
 ---
+import '@fontsource/inter/300.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/900.css';
+import '@fontsource/inter/700.css';
 import { FlowChart } from '../components/FlowChart';
 ---
 
@@ -12,9 +16,23 @@ import { FlowChart } from '../components/FlowChart';
     </head>
     <body>
         <main role="main">
-            <section class="h-screen w-screen">
+            <section class="h-screen w-full flex flex-col items-center justify-center text-center px-4">
+                <h1 class="text-6xl font-black mb-4">Mbanc Stepper Flow</h1>
+                <p>
+                    We are using React Flow to map out the stepper flow so we have a reference to look back on when altering it in the future
+                </p>
+            </section>
+            <section class="h-[90vh] w-[90vw] border mx-auto m-10">
                 <FlowChart client:load/>
             </section>
         </main>
     </body>
 </html>
+
+<style>
+    html,
+    body,
+    * {
+        font-family: "Inter", Arial, Helvetica, sans-serif;
+    }
+</style>
